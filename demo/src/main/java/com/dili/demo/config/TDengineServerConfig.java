@@ -18,8 +18,8 @@ import javax.sql.DataSource;
  * @author wangmi
  * @date 2021/6/17
  */
-@Configuration
-@MapperScan(basePackages = {"com.mapper.tdengine"}, sqlSessionTemplateRef  = "tdengineSqlSessionTemplate")
+//@Configuration
+//@MapperScan(basePackages = {"com.mapper.tdengine"}, sqlSessionTemplateRef  = "tdengineSqlSessionTemplate")
 public class TDengineServerConfig {
     @Bean(name = "tdengineDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.tdengine-server")

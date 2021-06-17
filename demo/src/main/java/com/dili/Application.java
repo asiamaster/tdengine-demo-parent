@@ -1,11 +1,13 @@
 package com.dili;
 
+import com.dili.ss.datasource.aop.DynamicRoutingDataSourceRegister;
 import com.dili.ss.dto.DTOScan;
 import com.dili.ss.retrofitful.annotation.RestfulScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -16,6 +18,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ComponentScan(basePackages={"com.dili.ss", "com.dili.demo"})
 @RestfulScan({"com.dili.demo.rpc"})
 @DTOScan(value={"com.dili.ss", "com.dili.demo.domain"})
+@Import({DynamicRoutingDataSourceRegister.class})
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
