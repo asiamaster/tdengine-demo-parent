@@ -1,16 +1,13 @@
 package com.dili.demo.controller;
 
 import com.dili.demo.domain.User;
-import com.dili.demo.mapper.UserMapper;
 import com.dili.demo.service.UserService;
 import com.dili.demo.tddomain.ElectricPower;
-import com.dili.demo.mapper.ElectricPowerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
